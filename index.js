@@ -1,9 +1,14 @@
 //javascript fix btn and link:
 //https://kritauto.com/products/forward-control-foot-peg-stretch-gear-brake-lever-honda-rebel-cmx-1100-21-22-dct#1574671007763_mobile
+
+// Fix Dropdown and button of quantity
+
+// HOW TO INSTALL
+// install this javascript on "theme.liquid"
 let qtyGroupx = document.getElementsByClassName('product-form__item product-form__item--quantity quantity');
 let newQuantityValue = qtyGroupx[0].children[1].children[1].value;
 
-// check with
+// check with screen
 let widthCheckScreenX = screen.width;
 let checkMaxScreenX = 768;
 let priceResultOri = 0;
