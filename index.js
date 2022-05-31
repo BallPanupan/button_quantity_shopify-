@@ -1,7 +1,6 @@
-//javascript fix btn and link:
-//https://kritauto.com/products/forward-control-foot-peg-stretch-gear-brake-lever-honda-rebel-cmx-1100-21-22-dct#1574671007763_mobile
-
-// Fix Dropdown and button of quantity
+// javascript fix btn and link:
+// https://kritauto.com/products/forward-control-foot-peg-stretch-gear-brake-lever-honda-rebel-cmx-1100-21-22-dct#1574671007763_mobile
+// Fix(Dropdown and button of quantity)\
 
 // HOW TO INSTALL
 // install this javascript on "theme.liquid"
@@ -12,7 +11,6 @@ let newQuantityValue = qtyGroupx[0].children[1].children[1].value;
 let widthCheckScreenX = screen.width;
 let checkMaxScreenX = 768;
 let priceResultOri = 0;
-
 
 // get price
 function financialx(x) {
@@ -26,23 +24,16 @@ function getPriceOri(){
     priceResultOri = financialx(priceResult)
 }
 
-
 // total sumerly and update 
 function totalSumerlyX(){
     let nowSumerly = priceResultOri * qtyGroupx[0].children[1].children[1].value;
-    // console.log(nowSumerly.toFixed(2));
-
     let getTotalPriceX = document.getElementsByClassName('total-price');
     let getPriceResult = getTotalPriceX[0].children[1].children[0];
-
     var formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
     });
-
     formatter.format(2500);
-
-    // getPriceResult.innerText = '$' + nowSumerly.toFixed(2);
     getPriceResult.innerText = formatter.format(nowSumerly);
 }
 
@@ -74,11 +65,9 @@ function dupBtnX(){
 if(widthCheckScreenX <= checkMaxScreenX){
     dupBtnX();
     getPriceOri();
-    // console.log('Screen :', true)
 }else{
     qtyGroupx[0].children[1].children[0].href = '#'
     qtyGroupx[0].children[1].children[2].href = '#'
-    // console.log('Screen :', false)
 }
 
 let jQueryScript = document.createElement('script');  
